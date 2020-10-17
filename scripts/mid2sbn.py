@@ -104,7 +104,7 @@ if __name__ == '__main__':
 	tracks['snes'][0].append(b'\xf7\x03\x07\x03\xf5\x07\xc0\xc0')
 
 	# (hardcoded) vibrato test
-	tracks['snes'][0].append(b'\xe3\x0c\x15\x18')
+	# tracks['snes'][0].append(b'\xe3\x0c\x15\x18')
 	
 	# enumerate all the events -> midi track bin
 	last_msg = mido.Message('reset')	# dummy message... where's the null message?
