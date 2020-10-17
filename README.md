@@ -6,9 +6,9 @@ Demonstration of making the Super Game Boy play SNES music. Currently this will
 not work on a bog-standard GameBoy emulator (not even BGB)
 
 The SGB reads this music data by reading the screen when prompted by a `SOU_TRN`
-packet.
+packet. As a consequence, the screen will be full of garbage, and it should be hidden from view by using `MASK_EN` before the data is rendered to VRAM. This is not implemented here.
 
-The music data itself is in the SBN format (a very simple, block-based container
+The music data itself is in the [SBN format](https://github.com/LuigiBlood/SBN2SPC/blob/main/README.md) (a very simple, block-based container
 for SPC music data basically)
 
 The SPC data itself is just song sequence data in the basic [N-SPC](https://sneslab.net/wiki/N-SPC_Engine) format.
