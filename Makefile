@@ -7,13 +7,12 @@ MAKEFLAGS += -rR
 .PHONY: clean clean-dist rom
 .PRECIOUS: %.sbn
 
-RGBDSDIR	:= /usr/bin
-ASM	:= $(RGBDSDIR)/rgbasm
-GFX	:= $(RGBDSDIR)/rgbgfx
-LNK	:= $(RGBDSDIR)/rgblink
-FIX	:= $(RGBDSDIR)/rgbfix
+ASM	?= rgbasm
+GFX	?= rgbgfx
+LNK	?= rgblink
+FIX	?= rgbfix
 
-PYTHON := /usr/bin/python3
+PYTHON ?= python3
 
 ROMNAME  := sgbtest
 GAMENAME := "SGB TEST ROM"
